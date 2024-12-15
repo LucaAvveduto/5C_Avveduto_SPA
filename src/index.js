@@ -10,7 +10,7 @@ const show = (element) => {
    element.classList.remove("hidden");
 }
 
-export const createNavigator = (parentElement) => {
+const createNavigator = (parentElement) => {
    const pages = Array.from(parentElement.querySelectorAll(".page"));
 
    const render = () => {
@@ -23,3 +23,5 @@ export const createNavigator = (parentElement) => {
    window.addEventListener('popstate', render);
    render();
 }
+
+const navigator = createNavigator(document.querySelector("#infos"));

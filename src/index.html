@@ -2,25 +2,2787 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-   <link rel="stylesheet" type="text/css" href="./style.css" />
-   <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-   <title>SPA - Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <title>SPA - Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="https://cipiaceinfo.it/xmlrpc.php">
+
+    <title>Scheduling in Windows e Linux – Ci piace info</title>
+    <meta name="robots" content="max-image-preview:large">
+    <style>
+        img:is([sizes="auto" i], [sizes^="auto," i]) {
+            contain-intrinsic-size: 3000px 1500px
+        }
+    </style>
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="alternate" type="application/rss+xml" title="Ci piace info » Feed" href="https://cipiaceinfo.it/feed/">
+    <link rel="alternate" type="application/rss+xml" title="Ci piace info » Feed dei commenti"
+        href="https://cipiaceinfo.it/comments/feed/">
+    <link rel="stylesheet" id="sydney-bootstrap-css"
+        href="https://cipiaceinfo.it/wp-content/themes/sydney/css/bootstrap/bootstrap.min.css?ver=1" type="text/css"
+        media="all">
+    <link rel="stylesheet" id="wp-block-library-css"
+        href="https://cipiaceinfo.it/wp-includes/css/dist/block-library/style.min.css?ver=6.7.1" type="text/css"
+        media="all">
+    <style id="wp-block-library-inline-css" type="text/css">
+        .wp-block-image.is-style-sydney-rounded img {
+            border-radius: 30px;
+        }
+
+        .wp-block-gallery.is-style-sydney-rounded img {
+            border-radius: 30px;
+        }
+    </style>
+    <style id="global-styles-inline-css" type="text/css">
+        :root {
+            --wp--preset--aspect-ratio--square: 1;
+            --wp--preset--aspect-ratio--4-3: 4/3;
+            --wp--preset--aspect-ratio--3-4: 3/4;
+            --wp--preset--aspect-ratio--3-2: 3/2;
+            --wp--preset--aspect-ratio--2-3: 2/3;
+            --wp--preset--aspect-ratio--16-9: 16/9;
+            --wp--preset--aspect-ratio--9-16: 9/16;
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--cyan-bluish-gray: #abb8c3;
+            --wp--preset--color--white: #ffffff;
+            --wp--preset--color--pale-pink: #f78da7;
+            --wp--preset--color--vivid-red: #cf2e2e;
+            --wp--preset--color--luminous-vivid-orange: #ff6900;
+            --wp--preset--color--luminous-vivid-amber: #fcb900;
+            --wp--preset--color--light-green-cyan: #7bdcb5;
+            --wp--preset--color--vivid-green-cyan: #00d084;
+            --wp--preset--color--pale-cyan-blue: #8ed1fc;
+            --wp--preset--color--vivid-cyan-blue: #0693e3;
+            --wp--preset--color--vivid-purple: #9b51e0;
+            --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+            --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+            --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+            --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+            --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+            --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+            --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+            --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+            --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+            --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+            --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+            --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+            --wp--preset--font-size--small: 13px;
+            --wp--preset--font-size--medium: 20px;
+            --wp--preset--font-size--large: 36px;
+            --wp--preset--font-size--x-large: 42px;
+            --wp--preset--spacing--20: 0.44rem;
+            --wp--preset--spacing--30: 0.67rem;
+            --wp--preset--spacing--40: 1rem;
+            --wp--preset--spacing--50: 1.5rem;
+            --wp--preset--spacing--60: 2.25rem;
+            --wp--preset--spacing--70: 3.38rem;
+            --wp--preset--spacing--80: 5.06rem;
+            --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+            --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+            --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+            --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+            --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+        }
+
+        :root {
+            --wp--style--global--content-size: 740px;
+            --wp--style--global--wide-size: 1140px;
+        }
+
+        :where(body) {
+            margin: 0;
+        }
+
+        .wp-site-blocks {
+            padding-top: var(--wp--style--root--padding-top);
+            padding-bottom: var(--wp--style--root--padding-bottom);
+        }
+
+        .has-global-padding {
+            padding-right: var(--wp--style--root--padding-right);
+            padding-left: var(--wp--style--root--padding-left);
+        }
+
+        .has-global-padding>.alignfull {
+            margin-right: calc(var(--wp--style--root--padding-right) * -1);
+            margin-left: calc(var(--wp--style--root--padding-left) * -1);
+        }
+
+        .has-global-padding :where(:not(.alignfull.is-layout-flow) > .has-global-padding:not(.wp-block-block, .alignfull)) {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .has-global-padding :where(:not(.alignfull.is-layout-flow) > .has-global-padding:not(.wp-block-block, .alignfull))>.alignfull {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .wp-site-blocks>.alignleft {
+            float: left;
+            margin-right: 2em;
+        }
+
+        .wp-site-blocks>.alignright {
+            float: right;
+            margin-left: 2em;
+        }
+
+        .wp-site-blocks>.aligncenter {
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        :where(.wp-site-blocks)>* {
+            margin-block-start: 24px;
+            margin-block-end: 0;
+        }
+
+        :where(.wp-site-blocks)> :first-child {
+            margin-block-start: 0;
+        }
+
+        :where(.wp-site-blocks)> :last-child {
+            margin-block-end: 0;
+        }
+
+        :root {
+            --wp--style--block-gap: 24px;
+        }
+
+        :root :where(.is-layout-flow)> :first-child {
+            margin-block-start: 0;
+        }
+
+        :root :where(.is-layout-flow)> :last-child {
+            margin-block-end: 0;
+        }
+
+        :root :where(.is-layout-flow)>* {
+            margin-block-start: 24px;
+            margin-block-end: 0;
+        }
+
+        :root :where(.is-layout-constrained)> :first-child {
+            margin-block-start: 0;
+        }
+
+        :root :where(.is-layout-constrained)> :last-child {
+            margin-block-end: 0;
+        }
+
+        :root :where(.is-layout-constrained)>* {
+            margin-block-start: 24px;
+            margin-block-end: 0;
+        }
+
+        :root :where(.is-layout-flex) {
+            gap: 24px;
+        }
+
+        :root :where(.is-layout-grid) {
+            gap: 24px;
+        }
+
+        .is-layout-flow>.alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        .is-layout-flow>.alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        .is-layout-flow>.aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .is-layout-constrained>.alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        .is-layout-constrained>.alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        .is-layout-constrained>.aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .is-layout-constrained> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+            max-width: var(--wp--style--global--content-size);
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .is-layout-constrained>.alignwide {
+            max-width: var(--wp--style--global--wide-size);
+        }
+
+        body .is-layout-flex {
+            display: flex;
+        }
+
+        .is-layout-flex {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .is-layout-flex> :is(*, div) {
+            margin: 0;
+        }
+
+        body .is-layout-grid {
+            display: grid;
+        }
+
+        .is-layout-grid> :is(*, div) {
+            margin: 0;
+        }
+
+        body {
+            --wp--style--root--padding-top: 0px;
+            --wp--style--root--padding-right: 0px;
+            --wp--style--root--padding-bottom: 0px;
+            --wp--style--root--padding-left: 0px;
+        }
+
+        a:where(:not(.wp-element-button)) {
+            text-decoration: underline;
+        }
+
+        :root :where(.wp-element-button, .wp-block-button__link) {
+            background-color: #32373c;
+            border-width: 0;
+            color: #fff;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            padding: calc(0.667em + 2px) calc(1.333em + 2px);
+            text-decoration: none;
+        }
+
+        .has-black-color {
+            color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-color {
+            color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-color {
+            color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-color {
+            color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-color {
+            color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-color {
+            color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-color {
+            color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-color {
+            color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-color {
+            color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-color {
+            color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-color {
+            color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-color {
+            color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-background-color {
+            background-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-background-color {
+            background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-background-color {
+            background-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-background-color {
+            background-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-background-color {
+            background-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-background-color {
+            background-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-background-color {
+            background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-background-color {
+            background-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-border-color {
+            border-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-border-color {
+            border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-border-color {
+            border-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-border-color {
+            border-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-border-color {
+            border-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-border-color {
+            border-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-border-color {
+            border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-border-color {
+            border-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+            background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+        }
+
+        .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+            background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+        }
+
+        .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+        }
+
+        .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+            background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+        }
+
+        .has-cool-to-warm-spectrum-gradient-background {
+            background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+        }
+
+        .has-blush-light-purple-gradient-background {
+            background: var(--wp--preset--gradient--blush-light-purple) !important;
+        }
+
+        .has-blush-bordeaux-gradient-background {
+            background: var(--wp--preset--gradient--blush-bordeaux) !important;
+        }
+
+        .has-luminous-dusk-gradient-background {
+            background: var(--wp--preset--gradient--luminous-dusk) !important;
+        }
+
+        .has-pale-ocean-gradient-background {
+            background: var(--wp--preset--gradient--pale-ocean) !important;
+        }
+
+        .has-electric-grass-gradient-background {
+            background: var(--wp--preset--gradient--electric-grass) !important;
+        }
+
+        .has-midnight-gradient-background {
+            background: var(--wp--preset--gradient--midnight) !important;
+        }
+
+        .has-small-font-size {
+            font-size: var(--wp--preset--font-size--small) !important;
+        }
+
+        .has-medium-font-size {
+            font-size: var(--wp--preset--font-size--medium) !important;
+        }
+
+        .has-large-font-size {
+            font-size: var(--wp--preset--font-size--large) !important;
+        }
+
+        .has-x-large-font-size {
+            font-size: var(--wp--preset--font-size--x-large) !important;
+        }
+
+        :root :where(.wp-block-pullquote) {
+            font-size: 1.5em;
+            line-height: 1.6;
+        }
+    </style>
+    <link rel="stylesheet" id="sydney-google-fonts-css"
+        href="https://cipiaceinfo.it/wp-content/fonts/b078a50a1b138aaca371f3a68ef90616.css" type="text/css" media="all">
+    <link rel="stylesheet" id="sydney-style-css"
+        href="https://cipiaceinfo.it/wp-content/themes/sydney/style.css?ver=20230821" type="text/css" media="all">
+    <!--[if lte IE 9]>
+        <link rel='stylesheet' id='sydney-ie9-css' href='https://cipiaceinfo.it/wp-content/themes/sydney/css/ie9.css?ver=6.7.1' type='text/css' media='all' />
+        <![endif]-->
+    <link rel="stylesheet" id="sydney-style-min-css"
+        href="https://cipiaceinfo.it/wp-content/themes/sydney/css/styles.min.css?ver=20240307" type="text/css"
+        media="all">
+    <style id="sydney-style-min-inline-css" type="text/css">
+        .woocommerce ul.products li.product {
+            text-align: center;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .header-image {
+            background-size: cover;
+        }
+
+        .header-image {
+            height: 300px;
+        }
+
+        :root {
+            --sydney-global-color-1: #237BA3;
+            --sydney-global-color-2: #021436;
+            --sydney-global-color-3: #233452;
+            --sydney-global-color-4: #00102E;
+            --sydney-global-color-5: #737C8C;
+            --sydney-global-color-6: #00102E;
+            --sydney-global-color-7: #F4F5F7;
+            --sydney-global-color-8: #dbdbdb;
+            --sydney-global-color-9: #ffffff;
+        }
+
+        .llms-student-dashboard .llms-button-secondary:hover,
+        .llms-button-action:hover,
+        .read-more-gt,
+        .widget-area .widget_fp_social a,
+        #mainnav ul li a:hover,
+        .sydney_contact_info_widget span,
+        .roll-team .team-content .name,
+        .roll-team .team-item .team-pop .team-social li:hover a,
+        .roll-infomation li.address:before,
+        .roll-infomation li.phone:before,
+        .roll-infomation li.email:before,
+        .roll-testimonials .name,
+        .roll-button.border,
+        .roll-button:hover,
+        .roll-icon-list .icon i,
+        .roll-icon-list .content h3 a:hover,
+        .roll-icon-box.white .content h3 a,
+        .roll-icon-box .icon i,
+        .roll-icon-box .content h3 a:hover,
+        .switcher-container .switcher-icon a:focus,
+        .go-top:hover,
+        .hentry .meta-post a:hover,
+        #mainnav>ul>li>a.active,
+        #mainnav>ul>li>a:hover,
+        button:hover,
+        input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        .text-color,
+        .social-menu-widget a,
+        .social-menu-widget a:hover,
+        .archive .team-social li a,
+        a,
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a,
+        .classic-alt .meta-post a,
+        .single .hentry .meta-post a,
+        .content-area.modern .hentry .meta-post span:before,
+        .content-area.modern .post-cat {
+            color: var(--sydney-global-color-1)
+        }
+
+        .llms-student-dashboard .llms-button-secondary,
+        .llms-button-action,
+        .woocommerce #respond input#submit,
+        .woocommerce a.button,
+        .woocommerce button.button,
+        .woocommerce input.button,
+        .project-filter li a.active,
+        .project-filter li a:hover,
+        .preloader .pre-bounce1,
+        .preloader .pre-bounce2,
+        .roll-team .team-item .team-pop,
+        .roll-progress .progress-animate,
+        .roll-socials li a:hover,
+        .roll-project .project-item .project-pop,
+        .roll-project .project-filter li.active,
+        .roll-project .project-filter li:hover,
+        .roll-button.light:hover,
+        .roll-button.border:hover,
+        .roll-button,
+        .roll-icon-box.white .icon,
+        .owl-theme .owl-controls .owl-page.active span,
+        .owl-theme .owl-controls.clickable .owl-page:hover span,
+        .go-top,
+        .bottom .socials li:hover a,
+        .sidebar .widget:before,
+        .blog-pagination ul li.active,
+        .blog-pagination ul li:hover a,
+        .content-area .hentry:after,
+        .text-slider .maintitle:after,
+        .error-wrap #search-submit:hover,
+        #mainnav .sub-menu li:hover>a,
+        #mainnav ul li ul:after,
+        button,
+        input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        .panel-grid-cell .widget-title:after,
+        .cart-amount {
+            background-color: var(--sydney-global-color-1)
+        }
+
+        .llms-student-dashboard .llms-button-secondary,
+        .llms-student-dashboard .llms-button-secondary:hover,
+        .llms-button-action,
+        .llms-button-action:hover,
+        .roll-socials li a:hover,
+        .roll-socials li a,
+        .roll-button.light:hover,
+        .roll-button.border,
+        .roll-button,
+        .roll-icon-list .icon,
+        .roll-icon-box .icon,
+        .owl-theme .owl-controls .owl-page span,
+        .comment .comment-detail,
+        .widget-tags .tag-list a:hover,
+        .blog-pagination ul li,
+        .error-wrap #search-submit:hover,
+        textarea:focus,
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="datetime"]:focus,
+        input[type="datetime-local"]:focus,
+        input[type="date"]:focus,
+        input[type="month"]:focus,
+        input[type="time"]:focus,
+        input[type="week"]:focus,
+        input[type="number"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="color"]:focus,
+        button,
+        input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        .archive .team-social li a {
+            border-color: var(--sydney-global-color-1)
+        }
+
+        .sydney_contact_info_widget span {
+            fill: var(--sydney-global-color-1);
+        }
+
+        .go-top:hover svg {
+            stroke: var(--sydney-global-color-1);
+        }
+
+        .site-header.float-header {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        @media only screen and (max-width:1024px) {
+            .site-header {
+                background-color: #000000;
+            }
+        }
+
+        #mainnav ul li a,
+        #mainnav ul li::before {
+            color: #ffffff
+        }
+
+        #mainnav .sub-menu li a {
+            color: #ffffff
+        }
+
+        #mainnav .sub-menu li a {
+            background: #1c1c1c
+        }
+
+        .text-slider .maintitle,
+        .text-slider .subtitle {
+            color: #ffffff
+        }
+
+        body {
+            color:
+        }
+
+        #secondary {
+            background-color: #ffffff
+        }
+
+        #secondary,
+        #secondary a:not(.wp-block-button__link) {
+            color: #737C8C
+        }
+
+        .btn-menu .sydney-svg-icon {
+            fill: #ffffff
+        }
+
+        #mainnav ul li a:hover,
+        .main-header #mainnav .menu>li>a:hover {
+            color: #237BA3
+        }
+
+        .overlay {
+            background-color: #000000
+        }
+
+        .page-wrap {
+            padding-top: 83px;
+        }
+
+        .page-wrap {
+            padding-bottom: 100px;
+        }
+
+        @media only screen and (max-width:1025px) {
+            .mobile-slide {
+                display: block;
+            }
+
+            .slide-item {
+                background-image: none !important;
+            }
+
+            .header-slider {}
+
+            .slide-item {
+                height: auto !important;
+            }
+
+            .slide-inner {
+                min-height: initial;
+            }
+        }
+
+        .go-top.show {
+            border-radius: 2px;
+            bottom: 10px;
+        }
+
+        .go-top.position-right {
+            right: 20px;
+        }
+
+        .go-top.position-left {
+            left: 20px;
+        }
+
+        .go-top {
+            background-color: #237BA3;
+        }
+
+        .go-top:hover {
+            background-color: ;
+        }
+
+        .go-top {
+            color: ;
+        }
+
+        .go-top svg {
+            stroke: ;
+        }
+
+        .go-top:hover {
+            color: #237BA3;
+        }
+
+        .go-top:hover svg {
+            stroke: #237BA3;
+        }
+
+        .go-top .sydney-svg-icon,
+        .go-top .sydney-svg-icon svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .go-top {
+            padding: 15px;
+        }
+
+        .site-info {
+            border-top: 0 solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-widgets-grid {
+            gap: 30px;
+        }
+
+        @media (min-width:992px) {
+            .footer-widgets-grid {
+                padding-top: 95px;
+                padding-bottom: 95px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:991px) {
+            .footer-widgets-grid {
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+        }
+
+        @media (max-width:575px) {
+            .footer-widgets-grid {
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+        }
+
+        @media (min-width:992px) {
+            .sidebar-column .widget .widget-title {
+                font-size: 22px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:991px) {
+            .sidebar-column .widget .widget-title {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width:575px) {
+            .sidebar-column .widget .widget-title {
+                font-size: 22px;
+            }
+        }
+
+        @media (min-width:992px) {
+            .footer-widgets {
+                font-size: 16px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:991px) {
+            .footer-widgets {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width:575px) {
+            .footer-widgets {
+                font-size: 16px;
+            }
+        }
+
+        .footer-widgets {
+            background-color: #00102E;
+        }
+
+        .sidebar-column .widget .widget-title {
+            color: ;
+        }
+
+        .sidebar-column .widget h1,
+        .sidebar-column .widget h2,
+        .sidebar-column .widget h3,
+        .sidebar-column .widget h4,
+        .sidebar-column .widget h5,
+        .sidebar-column .widget h6 {
+            color: ;
+        }
+
+        .sidebar-column .widget {
+            color: #ffffff;
+        }
+
+        #sidebar-footer .widget a {
+            color: #ffffff;
+        }
+
+        #sidebar-footer .widget a:hover {
+            color: ;
+        }
+
+        .site-footer {
+            background-color: #00102E;
+        }
+
+        .site-info,
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info .sydney-svg-icon svg {
+            fill: #ffffff;
+        }
+
+        .site-info {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        @media (min-width:992px) {
+
+            button,
+            .roll-button,
+            a.button,
+            .wp-block-button__link,
+            input[type="button"],
+            input[type="reset"],
+            input[type="submit"] {
+                padding-top: 12px;
+                padding-bottom: 12px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:991px) {
+
+            button,
+            .roll-button,
+            a.button,
+            .wp-block-button__link,
+            input[type="button"],
+            input[type="reset"],
+            input[type="submit"] {
+                padding-top: 12px;
+                padding-bottom: 12px;
+            }
+        }
+
+        @media (max-width:575px) {
+
+            button,
+            .roll-button,
+            a.button,
+            .wp-block-button__link,
+            input[type="button"],
+            input[type="reset"],
+            input[type="submit"] {
+                padding-top: 12px;
+                padding-bottom: 12px;
+            }
+        }
+
+        @media (min-width:992px) {
+
+            button,
+            .roll-button,
+            a.button,
+            .wp-block-button__link,
+            input[type="button"],
+            input[type="reset"],
+            input[type="submit"] {
+                padding-left: 35px;
+                padding-right: 35px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:991px) {
+
+            button,
+            .roll-button,
+            a.button,
+            .wp-block-button__link,
+            input[type="button"],
+            input[type="reset"],
+            input[type="submit"] {
+                padding-left: 35px;
+                padding-right: 35px;
+            }
+        }
+
+        @media (max-width:575px) {
+
+            button,
+            .roll-button,
+            a.button,
+            .wp-block-button__link,
+            input[type="button"],
+            input[type="reset"],
+            input[type="submit"] {
+                padding-left: 35px;
+                padding-right: 35px;
+            }
+        }
+
+        button,
+        .roll-button,
+        a.button,
+        .wp-block-button__link,
+        input[type="button"],
+        input[type="reset"],
+        input[type="submit"] {
+            border-radius: 0;
+        }
+
+        @media (min-width:992px) {
+
+            button,
+            .roll-button,
+            a.button,
+            .wp-block-button__link,
+            input[type="button"],
+            input[type="reset"],
+            input[type="submit"] {
+                font-size: 14px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:991px) {
+
+            button,
+            .roll-button,
+            a.button,
+            .wp-block-button__link,
+            input[type="button"],
+            input[type="reset"],
+            input[type="submit"] {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width:575px) {
+
+            button,
+            .roll-button,
+            a.button,
+            .wp-block-button__link,
+            input[type="button"],
+            input[type="reset"],
+            input[type="submit"] {
+                font-size: 14px;
+            }
+        }
+
+        button,
+        .roll-button,
+        a.button,
+        .wp-block-button__link,
+        input[type="button"],
+        input[type="reset"],
+        input[type="submit"] {
+            text-transform: uppercase;
+        }
+
+        button,
+        div.wpforms-container-full .wpforms-form input[type=submit],
+        div.wpforms-container-full .wpforms-form button[type=submit],
+        div.wpforms-container-full .wpforms-form .wpforms-page-button,
+        .roll-button,
+        a.button,
+        .wp-block-button__link,
+        input[type="button"],
+        input[type="reset"],
+        input[type="submit"] {
+            background-color: ;
+        }
+
+        button:hover,
+        div.wpforms-container-full .wpforms-form input[type=submit]:hover,
+        div.wpforms-container-full .wpforms-form button[type=submit]:hover,
+        div.wpforms-container-full .wpforms-form .wpforms-page-button:hover,
+        .roll-button:hover,
+        a.button:hover,
+        .wp-block-button__link:hover,
+        input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover {
+            background-color: ;
+        }
+
+        button,
+        div.wpforms-container-full .wpforms-form input[type=submit],
+        div.wpforms-container-full .wpforms-form button[type=submit],
+        div.wpforms-container-full .wpforms-form .wpforms-page-button,
+        .checkout-button.button,
+        a.button,
+        .wp-block-button__link,
+        input[type="button"],
+        input[type="reset"],
+        input[type="submit"] {
+            color: ;
+        }
+
+        button:hover,
+        div.wpforms-container-full .wpforms-form input[type=submit]:hover,
+        div.wpforms-container-full .wpforms-form button[type=submit]:hover,
+        div.wpforms-container-full .wpforms-form .wpforms-page-button:hover,
+        .roll-button:hover,
+        a.button:hover,
+        .wp-block-button__link:hover,
+        input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover {
+            color: ;
+        }
+
+        .is-style-outline .wp-block-button__link,
+        div.wpforms-container-full .wpforms-form input[type=submit],
+        div.wpforms-container-full .wpforms-form button[type=submit],
+        div.wpforms-container-full .wpforms-form .wpforms-page-button,
+        .roll-button,
+        .wp-block-button__link.is-style-outline,
+        button,
+        a.button,
+        .wp-block-button__link,
+        input[type="button"],
+        input[type="reset"],
+        input[type="submit"] {
+            border-color: ;
+        }
+
+        button:hover,
+        div.wpforms-container-full .wpforms-form input[type=submit]:hover,
+        div.wpforms-container-full .wpforms-form button[type=submit]:hover,
+        div.wpforms-container-full .wpforms-form .wpforms-page-button:hover,
+        .roll-button:hover,
+        a.button:hover,
+        .wp-block-button__link:hover,
+        input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover {
+            border-color: ;
+        }
+
+        .posts-layout .list-image {
+            width: 30%;
+        }
+
+        .posts-layout .list-content {
+            width: 70%;
+        }
+
+        .content-area:not(.layout4):not(.layout6) .posts-layout .entry-thumb {
+            margin: 0 0 24px 0;
+        }
+
+        .layout4 .entry-thumb,
+        .layout6 .entry-thumb {
+            margin: 0 24px 0 0;
+        }
+
+        .layout6 article:nth-of-type(even) .list-image .entry-thumb {
+            margin: 0 0 0 24px;
+        }
+
+        .posts-layout .entry-header {
+            margin-bottom: 24px;
+        }
+
+        .posts-layout .entry-meta.below-excerpt {
+            margin: 15px 0 0;
+        }
+
+        .posts-layout .entry-meta.above-title {
+            margin: 0 0 15px;
+        }
+
+        .single .entry-header .entry-title {
+            color: ;
+        }
+
+        .single .entry-header .entry-meta,
+        .single .entry-header .entry-meta a {
+            color: ;
+        }
+
+        @media (min-width:992px) {
+            .single .entry-meta {
+                font-size: 12px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:991px) {
+            .single .entry-meta {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width:575px) {
+            .single .entry-meta {
+                font-size: 12px;
+            }
+        }
+
+        @media (min-width:992px) {
+            .single .entry-header .entry-title {
+                font-size: 48px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:991px) {
+            .single .entry-header .entry-title {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width:575px) {
+            .single .entry-header .entry-title {
+                font-size: 32px;
+            }
+        }
+
+        .posts-layout .entry-post {
+            color: #233452;
+        }
+
+        .posts-layout .entry-title a {
+            color: #00102E;
+        }
+
+        .posts-layout .author,
+        .posts-layout .entry-meta a {
+            color: #737C8C;
+        }
+
+        @media (min-width:992px) {
+            .posts-layout .entry-post {
+                font-size: 16px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:991px) {
+            .posts-layout .entry-post {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width:575px) {
+            .posts-layout .entry-post {
+                font-size: 16px;
+            }
+        }
+
+        @media (min-width:992px) {
+            .posts-layout .entry-meta {
+                font-size: 12px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:991px) {
+            .posts-layout .entry-meta {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width:575px) {
+            .posts-layout .entry-meta {
+                font-size: 12px;
+            }
+        }
+
+        @media (min-width:992px) {
+            .posts-layout .entry-title {
+                font-size: 32px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:991px) {
+            .posts-layout .entry-title {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width:575px) {
+            .posts-layout .entry-title {
+                font-size: 32px;
+            }
+        }
+
+        .single .entry-header {
+            margin-bottom: 40px;
+        }
+
+        .single .entry-thumb {
+            margin-bottom: 40px;
+        }
+
+        .single .entry-meta-above {
+            margin-bottom: 24px;
+        }
+
+        .single .entry-meta-below {
+            margin-top: 24px;
+        }
+
+        @media (min-width:992px) {
+            .custom-logo-link img {
+                max-width: 180px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:991px) {
+            .custom-logo-link img {
+                max-width: 100px;
+            }
+        }
+
+        @media (max-width:575px) {
+            .custom-logo-link img {
+                max-width: 100px;
+            }
+        }
+
+        .main-header,
+        .bottom-header-row {
+            border-bottom: 0 solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header_layout_3,
+        .header_layout_4,
+        .header_layout_5 {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .main-header,
+        .header-search-form {
+            background-color: ;
+        }
+
+        .main-header.sticky-active {
+            background-color: ;
+        }
+
+        .main-header .site-title a,
+        .main-header .site-description,
+        .main-header #mainnav .menu>li>a,
+        #mainnav .nav-menu>li>a,
+        .main-header .header-contact a {
+            color: ;
+        }
+
+        .main-header .sydney-svg-icon svg,
+        .main-header .dropdown-symbol .sydney-svg-icon svg {
+            fill: ;
+        }
+
+        .sticky-active .main-header .site-title a,
+        .sticky-active .main-header .site-description,
+        .sticky-active .main-header #mainnav .menu>li>a,
+        .sticky-active .main-header .header-contact a,
+        .sticky-active .main-header .logout-link,
+        .sticky-active .main-header .html-item,
+        .sticky-active .main-header .sydney-login-toggle {
+            color: ;
+        }
+
+        .sticky-active .main-header .sydney-svg-icon svg,
+        .sticky-active .main-header .dropdown-symbol .sydney-svg-icon svg {
+            fill: ;
+        }
+
+        .bottom-header-row {
+            background-color: ;
+        }
+
+        .bottom-header-row,
+        .bottom-header-row .header-contact a,
+        .bottom-header-row #mainnav .menu>li>a {
+            color: ;
+        }
+
+        .bottom-header-row #mainnav .menu>li>a:hover {
+            color: #021436;
+        }
+
+        .bottom-header-row .header-item svg,
+        .dropdown-symbol .sydney-svg-icon svg {
+            fill: ;
+        }
+
+        .main-header .main-header-inner,
+        .main-header .top-header-row {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .bottom-header-inner {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .bottom-header-row #mainnav ul ul li,
+        .main-header #mainnav ul ul li {
+            background-color: ;
+        }
+
+        .bottom-header-row #mainnav ul ul li a,
+        .bottom-header-row #mainnav ul ul li:hover a,
+        .main-header #mainnav ul ul li:hover a,
+        .main-header #mainnav ul ul li a {
+            color: ;
+        }
+
+        .bottom-header-row #mainnav ul ul li svg,
+        .main-header #mainnav ul ul li svg {
+            fill: ;
+        }
+
+        #mainnav .sub-menu li:hover>a,
+        .main-header #mainnav ul ul li:hover>a {
+            color: ;
+        }
+
+        .main-header-cart .count-number {
+            color: ;
+        }
+
+        .main-header-cart .widget_shopping_cart .widgettitle:after,
+        .main-header-cart .widget_shopping_cart .woocommerce-mini-cart__buttons:before {
+            background-color: rgba(33, 33, 33, 0.9);
+        }
+
+        .sydney-offcanvas-menu .mainnav ul li,
+        .mobile-header-item.offcanvas-items,
+        .mobile-header-item.offcanvas-items .social-profile {
+            text-align: left;
+        }
+
+        .sydney-offcanvas-menu #mainnav ul ul a {
+            color: ;
+        }
+
+        .sydney-offcanvas-menu #mainnav>div>ul>li>a {
+            font-size: 18px;
+        }
+
+        .sydney-offcanvas-menu #mainnav ul ul li a {
+            font-size: 16px;
+        }
+
+        .sydney-offcanvas-menu .mainnav a {
+            padding: 10px 0;
+        }
+
+        #masthead-mobile {
+            background-color: ;
+        }
+
+        #masthead-mobile .site-description,
+        #masthead-mobile a:not(.button) {
+            color: ;
+        }
+
+        #masthead-mobile svg {
+            fill: ;
+        }
+
+        .mobile-header {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .sydney-offcanvas-menu {
+            background-color: ;
+        }
+
+        .offcanvas-header-custom-text,
+        .sydney-offcanvas-menu,
+        .sydney-offcanvas-menu #mainnav a:not(.button),
+        .sydney-offcanvas-menu a:not(.button) {
+            color: #ffffff;
+        }
+
+        .sydney-offcanvas-menu svg,
+        .sydney-offcanvas-menu .dropdown-symbol .sydney-svg-icon svg {
+            fill: #ffffff;
+        }
+
+        @media (min-width:992px) {
+            .site-logo {
+                max-height: 100px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:991px) {
+            .site-logo {
+                max-height: 100px;
+            }
+        }
+
+        @media (max-width:575px) {
+            .site-logo {
+                max-height: 100px;
+            }
+        }
+
+        .site-title a,
+        .site-title a:visited,
+        .main-header .site-title a,
+        .main-header .site-title a:visited {
+            color:
+        }
+
+        .site-description,
+        .main-header .site-description {
+            color:
+        }
+
+        @media (min-width:992px) {
+            .site-title {
+                font-size: 32px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:991px) {
+            .site-title {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width:575px) {
+            .site-title {
+                font-size: 20px;
+            }
+        }
+
+        @media (min-width:992px) {
+            .site-description {
+                font-size: 16px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:991px) {
+            .site-description {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width:575px) {
+            .site-description {
+                font-size: 16px;
+            }
+        }
+
+        body {
+            font-family: ABeeZee, sans-serif;
+            font-weight: regular;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .site-title {
+            font-family: ABeeZee, sans-serif;
+            font-weight: regular;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .site-title {
+            text-decoration: ;
+            text-transform: ;
+            font-style: ;
+            line-height: 1.2;
+            letter-spacing: px;
+        }
+
+        @media (min-width:992px) {
+            h1:not(.site-title) {
+                font-size: 44px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:991px) {
+            h1:not(.site-title) {
+                font-size: 42px;
+            }
+        }
+
+        @media (max-width:575px) {
+            h1:not(.site-title) {
+                font-size: 32px;
+            }
+        }
+
+        @media (min-width:992px) {
+            h2 {
+                font-size: 30px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:991px) {
+            h2 {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width:575px) {
+            h2 {
+                font-size: 24px;
+            }
+        }
+
+        @media (min-width:992px) {
+            h3 {
+                font-size: 25px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:991px) {
+            h3 {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width:575px) {
+            h3 {
+                font-size: 20px;
+            }
+        }
+
+        @media (min-width:992px) {
+            h4 {
+                font-size: 20px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:991px) {
+            h4 {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width:575px) {
+            h4 {
+                font-size: 16px;
+            }
+        }
+
+        @media (min-width:992px) {
+            h5 {
+                font-size: 18px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:991px) {
+            h5 {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width:575px) {
+            h5 {
+                font-size: 16px;
+            }
+        }
+
+        @media (min-width:992px) {
+            h6 {
+                font-size: 16px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:991px) {
+            h6 {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width:575px) {
+            h6 {
+                font-size: 16px;
+            }
+        }
+
+        p,
+        .posts-layout .entry-post {
+            text-decoration:
+        }
+
+        body,
+        .posts-layout .entry-post {
+            text-transform: ;
+            font-style: ;
+            line-height: 1.68;
+            letter-spacing: px;
+        }
+
+        @media (min-width:992px) {
+            body {
+                font-size: 16px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:991px) {
+            body {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width:575px) {
+            body {
+                font-size: 16px;
+            }
+        }
+
+        @media (min-width:992px) {
+            .woocommerce div.product .product-gallery-summary .entry-title {
+                font-size: 32px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:991px) {
+            .woocommerce div.product .product-gallery-summary .entry-title {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width:575px) {
+            .woocommerce div.product .product-gallery-summary .entry-title {
+                font-size: 32px;
+            }
+        }
+
+        @media (min-width:992px) {
+            .woocommerce div.product .product-gallery-summary .price .amount {
+                font-size: 24px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:991px) {
+            .woocommerce div.product .product-gallery-summary .price .amount {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width:575px) {
+            .woocommerce div.product .product-gallery-summary .price .amount {
+                font-size: 24px;
+            }
+        }
+
+        .woocommerce ul.products li.product .col-md-7>*,
+        .woocommerce ul.products li.product .col-md-8>*,
+        .woocommerce ul.products li.product>* {
+            margin-bottom: 12px;
+        }
+
+        .wc-block-grid__product-onsale,
+        span.onsale {
+            border-radius: 0;
+            top: 20px !important;
+            left: 20px !important;
+        }
+
+        .wc-block-grid__product-onsale,
+        .products span.onsale {
+            left: auto !important;
+            right: 20px;
+        }
+
+        .wc-block-grid__product-onsale,
+        span.onsale {
+            color: ;
+        }
+
+        .wc-block-grid__product-onsale,
+        span.onsale {
+            background-color: ;
+        }
+
+        ul.wc-block-grid__products li.wc-block-grid__product .wc-block-grid__product-title,
+        ul.wc-block-grid__products li.wc-block-grid__product .woocommerce-loop-product__title,
+        ul.wc-block-grid__products li.product .wc-block-grid__product-title,
+        ul.wc-block-grid__products li.product .woocommerce-loop-product__title,
+        ul.products li.wc-block-grid__product .wc-block-grid__product-title,
+        ul.products li.wc-block-grid__product .woocommerce-loop-product__title,
+        ul.products li.product .wc-block-grid__product-title,
+        ul.products li.product .woocommerce-loop-product__title,
+        ul.products li.product .woocommerce-loop-category__title,
+        .woocommerce-loop-product__title .botiga-wc-loop-product__title {
+            color: ;
+        }
+
+        a.wc-forward:not(.checkout-button) {
+            color: ;
+        }
+
+        a.wc-forward:not(.checkout-button):hover {
+            color: #021436;
+        }
+
+        .woocommerce-pagination li .page-numbers:hover {
+            color: ;
+        }
+
+        .woocommerce-sorting-wrapper {
+            border-color: rgba(33, 33, 33, 0.9);
+        }
+
+        ul.products li.product-category .woocommerce-loop-category__title {
+            text-align: center;
+        }
+
+        ul.products li.product-category>a,
+        ul.products li.product-category>a>img {
+            border-radius: 0;
+        }
+
+        .entry-content a:not(.button):not(.elementor-button-link):not(.wp-block-button__link) {
+            color: #237BA3;
+        }
+
+        .entry-content a:not(.button):not(.elementor-button-link):not(.wp-block-button__link):hover {
+            color: #021436;
+        }
+
+        h1 {
+            color: ;
+        }
+
+        h2 {
+            color: ;
+        }
+
+        h3 {
+            color: ;
+        }
+
+        h4 {
+            color: ;
+        }
+
+        h5 {
+            color: ;
+        }
+
+        h6 {
+            color: ;
+        }
+
+        div.wpforms-container-full .wpforms-form input[type=date],
+        div.wpforms-container-full .wpforms-form input[type=datetime],
+        div.wpforms-container-full .wpforms-form input[type=datetime-local],
+        div.wpforms-container-full .wpforms-form input[type=email],
+        div.wpforms-container-full .wpforms-form input[type=month],
+        div.wpforms-container-full .wpforms-form input[type=number],
+        div.wpforms-container-full .wpforms-form input[type=password],
+        div.wpforms-container-full .wpforms-form input[type=range],
+        div.wpforms-container-full .wpforms-form input[type=search],
+        div.wpforms-container-full .wpforms-form input[type=tel],
+        div.wpforms-container-full .wpforms-form input[type=text],
+        div.wpforms-container-full .wpforms-form input[type=time],
+        div.wpforms-container-full .wpforms-form input[type=url],
+        div.wpforms-container-full .wpforms-form input[type=week],
+        div.wpforms-container-full .wpforms-form select,
+        div.wpforms-container-full .wpforms-form textarea,
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="number"],
+        input[type="tel"],
+        input[type="range"],
+        input[type="date"],
+        input[type="month"],
+        input[type="week"],
+        input[type="time"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="color"],
+        textarea,
+        select,
+        .woocommerce .select2-container .select2-selection--single,
+        .woocommerce-page .select2-container .select2-selection--single,
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="number"]:focus,
+        input[type="tel"]:focus,
+        input[type="range"]:focus,
+        input[type="date"]:focus,
+        input[type="month"]:focus,
+        input[type="week"]:focus,
+        input[type="time"]:focus,
+        input[type="datetime"]:focus,
+        input[type="datetime-local"]:focus,
+        input[type="color"]:focus,
+        textarea:focus,
+        select:focus,
+        .woocommerce .select2-container .select2-selection--single:focus,
+        .woocommerce-page .select2-container .select2-selection--single:focus,
+        .select2-container--default .select2-selection--single .select2-selection__rendered,
+        .wp-block-search .wp-block-search__input,
+        .wp-block-search .wp-block-search__input:focus {
+            color: ;
+        }
+
+        div.wpforms-container-full .wpforms-form input[type=date],
+        div.wpforms-container-full .wpforms-form input[type=datetime],
+        div.wpforms-container-full .wpforms-form input[type=datetime-local],
+        div.wpforms-container-full .wpforms-form input[type=email],
+        div.wpforms-container-full .wpforms-form input[type=month],
+        div.wpforms-container-full .wpforms-form input[type=number],
+        div.wpforms-container-full .wpforms-form input[type=password],
+        div.wpforms-container-full .wpforms-form input[type=range],
+        div.wpforms-container-full .wpforms-form input[type=search],
+        div.wpforms-container-full .wpforms-form input[type=tel],
+        div.wpforms-container-full .wpforms-form input[type=text],
+        div.wpforms-container-full .wpforms-form input[type=time],
+        div.wpforms-container-full .wpforms-form input[type=url],
+        div.wpforms-container-full .wpforms-form input[type=week],
+        div.wpforms-container-full .wpforms-form select,
+        div.wpforms-container-full .wpforms-form textarea,
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="number"],
+        input[type="tel"],
+        input[type="range"],
+        input[type="date"],
+        input[type="month"],
+        input[type="week"],
+        input[type="time"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="color"],
+        textarea,
+        select,
+        .woocommerce .select2-container .select2-selection--single,
+        .woocommerce-page .select2-container .select2-selection--single,
+        .woocommerce-cart .woocommerce-cart-form .actions .coupon input[type="text"] {
+            background-color: ;
+        }
+
+        div.wpforms-container-full .wpforms-form input[type=date],
+        div.wpforms-container-full .wpforms-form input[type=datetime],
+        div.wpforms-container-full .wpforms-form input[type=datetime-local],
+        div.wpforms-container-full .wpforms-form input[type=email],
+        div.wpforms-container-full .wpforms-form input[type=month],
+        div.wpforms-container-full .wpforms-form input[type=number],
+        div.wpforms-container-full .wpforms-form input[type=password],
+        div.wpforms-container-full .wpforms-form input[type=range],
+        div.wpforms-container-full .wpforms-form input[type=search],
+        div.wpforms-container-full .wpforms-form input[type=tel],
+        div.wpforms-container-full .wpforms-form input[type=text],
+        div.wpforms-container-full .wpforms-form input[type=time],
+        div.wpforms-container-full .wpforms-form input[type=url],
+        div.wpforms-container-full .wpforms-form input[type=week],
+        div.wpforms-container-full .wpforms-form select,
+        div.wpforms-container-full .wpforms-form textarea,
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="number"],
+        input[type="tel"],
+        input[type="range"],
+        input[type="date"],
+        input[type="month"],
+        input[type="week"],
+        input[type="time"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="color"],
+        textarea,
+        select,
+        .woocommerce .select2-container .select2-selection--single,
+        .woocommerce-page .select2-container .select2-selection--single,
+        .woocommerce-account fieldset,
+        .woocommerce-account .woocommerce-form-login,
+        .woocommerce-account .woocommerce-form-register,
+        .woocommerce-cart .woocommerce-cart-form .actions .coupon input[type="text"],
+        .wp-block-search .wp-block-search__input {
+            border-color: ;
+        }
+
+        input::placeholder {
+            color: ;
+            opacity: 1;
+        }
+
+        input:-ms-input-placeholder {
+            color: ;
+        }
+
+        input::-ms-input-placeholder {
+            color: ;
+        }
+    </style>
+    <link rel="stylesheet" id="hcb-style-css"
+        href="https://cipiaceinfo.it/wp-content/plugins/highlighting-code-block/build/css/hcb--light.css?ver=2.0.1"
+        type="text/css" media="all">
+    <style id="hcb-style-inline-css" type="text/css">
+        :root {
+            --hcb--fz--base: 14px
+        }
+
+        :root {
+            --hcb--fz--mobile: 13px
+        }
+
+        :root {
+            --hcb--ff: Menlo, Consolas, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" id="epkb-icon-fonts-css"
+        href="https://cipiaceinfo.it/wp-content/plugins/echo-knowledge-base/css/epkb-icon-fonts.min.css?ver=12.30.1"
+        type="text/css" media="all">
+    <link rel="stylesheet" id="epkb-ap-frontend-layout-vital-css"
+        href="https://cipiaceinfo.it/wp-content/plugins/echo-knowledge-base/css/ap-frontend-layout-vital.min.css?ver=12.30.1"
+        type="text/css" media="all">
+    <link rel="stylesheet" id="epkb-ap-frontend-layout-css"
+        href="https://cipiaceinfo.it/wp-content/plugins/echo-knowledge-base/css/ap-frontend-layout.min.css?ver=12.30.1"
+        type="text/css" media="all">
+    <style id="epkb-ap-frontend-layout-inline-css" type="text/css">
+        #eckb-article-page-container-v2 {
+            width: 100%
+        }
+
+        #eckb-article-page-container-v2 #eckb-article-body {
+            width: 1400px
+        }
+
+        #eckb-article-page-container-v2 #eckb-article-body {
+            grid-template-columns: 24% 76% 0;
+        }
+
+        #eckb-article-page-container-v2 #eckb-article-right-sidebar {
+            display: none;
+        }
+
+        #eckb-article-page-container-v2 #eckb-article-content {
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+
+        @media only screen and (max-width:1025px) {
+            #eckb-article-page-container-v2 {
+                width: 100%
+            }
+
+            #eckb-article-page-container-v2 #eckb-article-body {
+                width: 100%
+            }
+
+            #eckb-article-page-container-v2 #eckb-article-body {
+                grid-template-columns: 24% 76% 0;
+            }
+
+            #eckb-article-page-container-v2 #eckb-article-right-sidebar {
+                display: none;
+            }
+
+            #eckb-article-page-container-v2 #eckb-article-content {
+                grid-column-start: 2;
+                grid-column-end: 4;
+            }
+        }
+
+        #eckb-article-page-container-v2 #eckb-article-left-sidebar {
+            padding: 10px 10px 10px 10px;
+            background-color: #ffffff;
+            margin-top: 0px;
+        }
+
+        #eckb-article-page-container-v2 #eckb-article-content {
+            padding: 20px;
+            background-color: #efefef;
+        }
+
+        .eckb-article-content-created-date-container,
+        .eckb-article-content-last-updated-date-container,
+        .eckb-article-content-author-container,
+        .eckb-article-content-article-views-counter-container,
+        .eckb-ach__article-meta__date-created,
+        .eckb-ach__article-meta__author,
+        .eckb-ach__article-meta__views_counter,
+        .eckb-ach__article-meta__date-updated {
+            color: #000000;
+            font-size: 14px !important;
+        }
+
+        #eckb-article-page-container-v2 #eckb-article-right-sidebar {
+            padding: 10px 10px 10px 10px;
+            background-color: #FFFFFF;
+            margin-top: 0px;
+        }
+
+        @media only screen and (max-width:768px) {
+            #eckb-article-page-container-v2 {
+                width: 100%;
+            }
+
+            #eckb-article-page-container-v2 #eckb-article-content {
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+
+            #eckb-article-page-container-v2 #eckb-article-left-sidebar {
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+
+            #eckb-article-page-container-v2 #eckb-article-right-sidebar {
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+
+            #eckb-article-page-container-v2 .eckb-article-toc {
+                position: relative;
+                float: left;
+                width: 100%;
+                height: auto;
+                top: 0;
+            }
+
+            #eckb-article-page-container-v2 #eckb-article-body {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #eckb-article-page-container-v2 #eckb-article-left-sidebar {
+                order: 3;
+                margin-top: 0px !important;
+            }
+
+            #eckb-article-page-container-v2 #eckb-article-content {
+                order: 2;
+            }
+
+            #eckb-article-page-container-v2 #eckb-article-right-sidebar {
+                order: 1;
+                margin-top: 0px !important;
+            }
+        }
+
+        @media print {
+            @page {
+                margin: 10px 10px 10px 10px !important;
+            }
+        }
+
+        #epkb-sidebar-container-v2 {
+            background-color: #ffffff;
+            border-color: #F7F7F7;
+            border-width: 1px;
+            border-radius: 5px;
+        }
+
+        #epkb-sidebar-container-v2 .epkb-sidebar__cat__top-cat__heading-container {
+            text-align: left;
+            border-width: 1px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 8px;
+            padding-right: 8px;
+            border-bottom-color: #CDCDCD;
+            background-color: #f1f1f1;
+        }
+
+        #epkb-sidebar-container-v2 .epkb-sidebar__cat__top-cat:first-child .epkb-sidebar__cat__top-cat__heading-container {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        #epkb-sidebar-container-v2 .epkb-sidebar__cat__top-cat:last-child .epkb-sidebar__cat__top-cat__heading-container {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        #epkb-sidebar-container-v2 .epkb-sidebar__heading__inner .epkb-sidebar__heading__inner__name,
+        #epkb-sidebar-container-v2 .epkb-sidebar__heading__inner .epkb-sidebar__heading__inner__cat-name,
+        #epkb-sidebar-container-v2 .epkb-sidebar__heading__inner .epkb-sidebar__heading__inner__name>a {
+            color: #021436;
+            text-align: left;
+        }
+
+        #epkb-sidebar-container-v2 .epkb-sidebar__heading__inner .epkb-sidebar__heading__inner__desc p {
+            color: #000000;
+            text-align: left;
+        }
+
+        #epkb-sidebar-container-v2 .epkb-sidebar__cat__top-cat__body-container {
+            padding-top: 8px;
+            padding-bottom: 10px;
+            padding-left: 0px;
+            padding-right: 5px;
+        }
+
+        #epkb-sidebar-container-v2 {
+            min-height: 350px;
+        }
+
+        #epkb-sidebar-container-v2 .epkb-sidebar__cat__top-cat__body-container .epkb-sidebar__body__sub-cat {
+            padding-left: 10px;
+        }
+
+        .epkb-sidebar__cat__top-cat__body-container .epkb-articles .eckb-article-title,
+        .epkb-sidebar__cat__top-cat__body-container .epkb-articles-coming-soon {
+            color: #037ba3 !important;
+        }
+
+        .epkb-sidebar__cat__top-cat__body-container .epkb-articles .active {
+            color: #000000;
+            background-color: #e8e8e8;
+        }
+
+        .epkb-sidebar__cat__top-cat__body-container .epkb-articles .active .eckb-article-title {
+            color: #000000 !important;
+        }
+
+        #epkb-sidebar-container-v2 .epkb-category-level-2-3 .epkb-category-level-2-3__cat-name {
+            font-family: inherit;
+            font-weight: inherit;
+            font-size: inherit;
+            color: #021436 !important;
+        }
+
+        #eckb-article-header #epkb-ml__module-search {
+            margin-bottom: 40px;
+            padding-top: 20px;
+            padding-bottom: 50px;
+            background-color: #021436;
+        }
+
+        #epkb-ml__module-search .epkb-ml-search-title {
+            color: #FFFFFF;
+        }
+
+        #epkb-ml__module-search #epkb-ml-search-classic-layout #epkb-ml-search-form {
+            max-width: 40% !important;
+        }
+
+        #epkb-ml__module-search #epkb-ml-search-classic-layout .epkb-ml-search-box__input {
+            background-color: #FFFFFF !important;
+        }
+
+        #epkb-ml__module-search #epkb-ml-search-classic-layout #epkb-ml-search-form #epkb-ml-search-box {
+            background-color: #000000 !important;
+        }
+
+        #epkb-ml__module-search #epkb-ml-search-classic-layout .epkb-ml-search-box__btn {
+            background-color: #878787 !important;
+        }
+
+        #epkb-ml__module-search #epkb-ml-search-modern-layout #epkb-ml-search-form {
+            max-width: 40% !important;
+        }
+
+        #epkb-ml__module-search #epkb-ml-search-modern-layout #epkb-ml-search-form #epkb-ml-search-box {
+            background-color: #878787 !important;
+        }
+
+        #epkb-ml__module-search #epkb-ml-search-modern-layout .epkb-ml-search-box__input {
+            background-color: #FFFFFF !important;
+        }
+
+        #wpadminbar #wp-admin-bar-epkb-edit-mode-button>.ab-item:before {
+            content: "\f118";
+            top: 2px;
+            float: left;
+            font: normal 20px/1 dashicons;
+            speak: none;
+            padding: 4px 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-image: none !important;
+            margin-right: 6px;
+            color: #4391F3;
+        }
+
+        #wpadminbar #wp-admin-bar-epkb-edit-mode-button>.ab-item:hover:before {
+            color: #4391F3;
+        }
+    </style>
+
+    <!-- Snippet del tag Google (gtag.js) aggiunto da Site Kit -->
+
+    <!-- Snippet Google Analytics aggiunto da Site Kit -->
+    <script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=GT-NGBJX5ZK" id="google_gtagjs-js"
+        async=""></script>
+    <script type="text/javascript" id="google_gtagjs-js-after">
+        /* <![CDATA[ */
+        window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); }
+        gtag("set", "linker", { "domains": ["cipiaceinfo.it"] });
+        gtag("js", new Date());
+        gtag("set", "developer_id.dZTNiMT", true);
+        gtag("config", "GT-NGBJX5ZK");
+        /* ]]> */
+    </script>
+
+    <!-- Snippet del tag Google (gtag.js) finale aggiunto da Site Kit -->
+    <script type="text/javascript" src="https://cipiaceinfo.it/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"
+        id="jquery-core-js"></script>
+    <script type="text/javascript" src="https://cipiaceinfo.it/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
+        id="jquery-migrate-js"></script>
+    <script type="text/javascript" id="epkb-public-scripts-js-extra">
+        /* <![CDATA[ */
+        var epkb_vars = { "ajaxurl": "\/wp-admin\/admin-ajax.php", "msg_try_again": "Please try again later.", "error_occurred": "Error occurred (1936)", "not_saved": "Error occurred (2456)", "unknown_error": "Unknown error (1247)", "reload_try_again": "Please reload the page and try again.", "save_config": "Saving configuration", "input_required": "Input is required", "load_template": "Loading Template...", "nonce": "44cd1403ae", "toc_editor_msg": "The TOC is not displayed because there are no matching headers in the article.", "creating_demo_data": "Creating a Knowledge Base with demo categories and articles. It will be completed shortly.", "article_views_counter_method": "delay" };
+        /* ]]> */
+    </script>
+    <script type="text/javascript"
+        src="https://cipiaceinfo.it/wp-content/plugins/echo-knowledge-base/js/public-scripts.min.js?ver=12.30.1"
+        id="epkb-public-scripts-js"></script>
+    <link rel="https://api.w.org/" href="https://cipiaceinfo.it/wp-json/">
+    <link rel="alternate" title="JSON" type="application/json"
+        href="https://cipiaceinfo.it/wp-json/wp/v2/epkb_post_type_1/686">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://cipiaceinfo.it/xmlrpc.php?rsd">
+    <meta name="generator" content="WordPress 6.7.1">
+    <link rel="canonical"
+        href="https://cipiaceinfo.it/docs/tecnologie/sistemi-operativi/scheduling-in-windows-e-linux/">
+    <link rel="shortlink" href="https://cipiaceinfo.it/?p=686">
+    <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"
+        href="https://cipiaceinfo.it/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcipiaceinfo.it%2Fdocs%2Ftecnologie%2Fsistemi-operativi%2Fscheduling-in-windows-e-linux%2F">
+    <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"
+        href="https://cipiaceinfo.it/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcipiaceinfo.it%2Fdocs%2Ftecnologie%2Fsistemi-operativi%2Fscheduling-in-windows-e-linux%2F&amp;format=xml">
+    <meta name="generator" content="Site Kit by Google 1.135.0">
+    <meta name="msapplication-TileImage"
+        content="https://cipiaceinfo.it/wp-content/uploads/2024/06/cropped-icona-270x270.png">
 </head>
 
 <body>
-   <div id="container" class="container">
-    <div class="row" id="title"><h1>Esempio di SPA</h1></div>
-      <div id="links" class="row">
-        <div class="col-1"></div>
-        <div class="col"><a class="btn btn-primary" role="button" aria-disabled="true">Scheduling in windows e linux</a></div>
-        <div class="col"><a class="btn btn-success" role="button" aria-disabled="true">Programmazione parallela in C++</a></div>
-         <div class="col"><a class="btn btn-danger" role="button" aria-disabled="true">Processi e risorse</a></div>                  
-      </div>
-   </div>
-   <script type="module" src="./index.js"></script>
+    <div id="infos">
+        <div id="home" class="container page">
+            <div class="row" id="title">
+                <h1>Esempio di SPA</h1>
+            </div>
+            <div id="links" class="row">
+                <div class="col-1"></div>
+                <div class="col"><a class="btn btn-primary" role="button" aria-disabled="true" href="#div1">Scheduling
+                        in windows e
+                        linux</a></div>
+                <div class="col"><a class="btn btn-success" role="button" aria-disabled="true"
+                        href="#div2">Programmazione parallela in
+                        C++</a></div>
+                <div class="col"><a class="btn btn-danger" role="button" aria-disabled="true" href="#div3">Processi e
+                        risorse</a></div>
+            </div>
+            <h3 id="credits">Tutte le informazioni sono prese da <a href="https://cipiaceinfo.it/docs/home/benvenuti/" target="_blank">cipiaceinfo.it</a></h3>
+        </div>
+
+        <div id="div1" class="hidden page">
+            <span id="toptarget"></span>
+
+            <div class="preloader disable" style="display: none;">
+                <div class="spinner">
+                    <div class="pre-bounce1"></div>
+                    <div class="pre-bounce2"></div>
+                </div>
+            </div>
+
+
+            <div id="page" class="hfeed site">
+                <a class="skip-link screen-reader-text" href="#content">Vai al contenuto</a>
+
+            </div>
+
+
+
+            <div class="sydney-hero-area">
+                <div class="header-image">
+                    <div class="overlay"></div>
+                </div>
+
+            </div>
+
+
+            <div id="content" class="page-wrap">
+                <div class="content-wrapper container">
+                    <article id="eckb-article-content" data-article-id="686">
+                        <div id="eckb-article-content-header-v2">
+                            <div id="eckb-article-content-header-row-1">
+                                <div class="eckb-article-content-header-row-left-group">
+                                    <div id="eckb-article-content-breadcrumb-container">
+                                        <div class="eckb-breadcrumb"
+                                            style="padding-top: 0px; padding-right: 4px; padding-bottom: 0px; padding-left: 4px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-size:14px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="eckb-article-content-header-row-right-group">
+                                    <div id="eckb-article-content-toolbar-container">
+                                        <div class="eckb-article-content-toolbar-button-container">
+                                            <span> 
+                                                <a class="btn btn-primary" role="button" aria-disabled="true" href="#home">Home</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="eckb-article-content-header-row-2">
+                                <div class="eckb-article-content-header-row-left-group">
+                                    <div id="eckb-article-content-title-container">
+                                        <h1 class="eckb-article-title">Scheduling in Windows e Linux
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="eckb-article-content-body">
+                            <p>Partiamo col definire il termine<strong>&nbsp;preemptive</strong>:
+                                questa modalità consiste nella capacità del sistema operativo di
+                                interrompere l’esecuzione di qualsiasi thread o processo in
+                                qualsiasi istruzione e ripristinarlo in qualsiasi punto del
+                                programma. Sia Windows che Linux hanno funzionalità preemptive, ed è
+                                una condizione essenziale del loro funzionamento.</p>
+
+
+
+                            <p>Vediamo come funziona nei vari sistemi operativi.</p>
+
+
+
+                            <h2 class="wp-block-heading" data-id="articleTOC_0">
+                                <strong>Windows</strong>
+                            </h2>
+
+
+
+                            <p>– le code di esecuzione sono solo thread (minimo 1 thread per
+                                processo);</p>
+
+
+
+                            <p>– ogni thread ha un livello di priorità (1-15 per i processi normali,
+                                il cui valore può essere modificato dallo scheduler, 16-31 per i
+                                processi ad alta priorità): valore più alto significa più alta
+                                priorità;</p>
+
+
+
+                            <p>– i thread hanno gli stati ready, wait, run</p>
+
+
+
+                            <p>– all’inizio del quanto lo scheduler sceglie il primo thread di
+                                priorità più alta. Se non ci sono altri thread alla conclusione del
+                                quanto il thread viene rimesso in coda con la stessa priorità;</p>
+
+
+
+                            <p>– se durante il quanto si inserisce un thread con priorità più alta,
+                                windows sospende il thread, lo rimette in coda e fa partire un nuovo
+                                quanto col thread a priorità più alta;</p>
+
+
+
+                            <p>– se durante un quanto un thread chiede una risorsa, va in wait;</p>
+
+
+
+                            <p>– al termine di ogni quanto la priorità di tutti i thread in stato
+                                ready aumenta di 1 (fino a 15);</p>
+
+
+
+                            <p>– i quanti foreground (finestre attive) sono più lunghi dei quanti di
+                                background (questo per garantire la reattività del sistema).</p>
+
+
+
+                            <p>Come si vede il sistema è articolato, e tiene conto sia della
+                                starvation, sia della reattività con l’utente.</p>
+
+
+
+                            <h2 class="wp-block-heading" data-id="articleTOC_1">
+                                <strong>Linux&nbsp;</strong>
+                            </h2>
+
+
+
+                            <p>– le code di esecuzione possono essere processi o thread (per
+                                comodità li chiamiamo task)</p>
+
+
+
+                            <p>– le priorità vanno da 0-99 (real time) e 100-139 (normali): numero
+                                più basso significa maggiore priorità;</p>
+
+
+
+                            <p>– finché i task real time (urgenti) restano attivi inibiscono
+                                l’esecuzione dei processi normali;</p>
+
+
+
+                            <p>– all’interno dei processi real time, c’è la categoria FIFO (First In
+                                First Out) che non può essere mai interrotta in modo preemptive (si
+                                tratta di processi kernel che goverano l’intero sistema, in genere
+                                manutenzione), e la categoria RR (Round Robin) che invece ha una
+                                schedulazione divisa in quanti di tempo: in ogni quanto viene
+                                eseguito un task, al termine del task il processo viene messo in
+                                coda; la coda è data dalla priorità dei processi;</p>
+
+
+
+                            <p>– all’interno dei processi normali, si applica l’algoritmo CFS
+                                (Completeley Fair Scheduler): in pratica ad ogni processo viene
+                                garantito lo stesso tempo di cpu (se ci sono 20 processi, si divide
+                                il tempo di cpu per 20). Il quanto è quindi determinato
+                                dinamicamente da una costante (detta time limit, tipicamente 0,2
+                                secondi, dipende dalla versione del kernel) divisa per il numero di
+                                processi. Al termine di ogni quanto lo scheduler mette il processo
+                                che ha usato la cpu meno tempo. Quindi se ci sono pochi processi
+                                avremo quanti lunghi, se ci sono molti processi avremo quanti brevi.
+                            </p>
+
+
+
+                            <p>– il limite di CFS è che se sono attivi molti processi il costo del
+                                context switch può diventare significativo. Per questo si introduce
+                                un limite minimo (min_granularity).di lunghezza del quanto.&nbsp;
+                            </p>
+
+
+
+                            <p><strong>Esempio</strong>:</p>
+
+
+
+                            <p>ipotizziamo un sistema Linux con questi due processi:</p>
+
+
+
+                            <figure class="wp-block-table">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>PID</td>
+                                            <td>priorità</td>
+                                            <td>durata (ms)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>105</td>
+                                            <td>150</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>120</td>
+                                            <td>300</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>110</td>
+                                            <td>400</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </figure>
+
+
+
+                            <p>Calcolare la sequenza dei quanti.</p>
+
+
+
+                            <p><strong>Risposta</strong>:</p>
+
+
+
+                            <p>siccome ci sono 3 processi, abbiamo un quanto pari a 200ms/3= 66 ms,
+                                finchè sono attivi 3 procssi, poi diventa 100ms ed infine 200ms. Si
+                                segue quindi un ordine di priorità.</p>
+
+
+
+                            <figure class="wp-block-table">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>quanto</td>
+                                            <td>PID</td>
+                                            <td>durata quanto</td>
+                                            <td>tempo rimanente</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#1</td>
+                                            <td>1</td>
+                                            <td>66</td>
+                                            <td>150-66=84</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#2</td>
+                                            <td>2</td>
+                                            <td>66</td>
+                                            <td>300-66=234</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#3</td>
+                                            <td>3</td>
+                                            <td>66</td>
+                                            <td>400-66=334</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#4</td>
+                                            <td>1</td>
+                                            <td>66</td>
+                                            <td>84-66=22</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#5</td>
+                                            <td>2</td>
+                                            <td>66</td>
+                                            <td>234-66=168</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#6</td>
+                                            <td>3</td>
+                                            <td>66</td>
+                                            <td>334-66=268</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#7</td>
+                                            <td>1</td>
+                                            <td>22</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#8</td>
+                                            <td>2</td>
+                                            <td>100</td>
+                                            <td>234-100=134</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#9</td>
+                                            <td>3</td>
+                                            <td>100</td>
+                                            <td>334-100=234</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#10</td>
+                                            <td>2</td>
+                                            <td>100</td>
+                                            <td>134-100=34</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#11</td>
+                                            <td>3</td>
+                                            <td>100</td>
+                                            <td>234-100=234</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#12</td>
+                                            <td>2</td>
+                                            <td>34</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#13</td>
+                                            <td>3</td>
+                                            <td>200</td>
+                                            <td>234-200=34</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#14</td>
+                                            <td>3</td>
+                                            <td>34</td>
+                                            <td>0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </figure>
+                        </div>
+                    </article><!-- /#eckb-article-content -->
+                    <div id="eckb-article-right-sidebar"></div>
+                </div><!-- /#eckb-article-body -->
+                <div id="eckb-article-footer"></div>
+            </div><!-- /#eckb-article-page-container-v2 -->
+
+            <style id="eckb-article-styles" type="text/css">
+                #eckb-article-body .eckb-article-toc ul a.active {
+                    background-color: #000000;
+                    color: #ffffff;
+                }
+
+                #eckb-article-body .eckb-article-toc ul a:hover {
+                    background-color: #e1ecf7;
+                    color: #000000;
+                }
+
+                #eckb-article-body .eckb-article-toc__inner {
+                    border-color: #2b98e5;
+                    font-size: 14px !important;
+                    background-color: #fcfcfc;
+                }
+
+                #eckb-article-body .eckb-article-toc__inner a {
+                    color: #000000;
+                    font-size: 14px !important;
+                }
+
+                #eckb-article-body .eckb-article-toc__title {
+                    color: #2b98e5;
+                    font-size: 15px !important;
+                }
+
+                @media only screen and (min-width:768px) {
+
+                    #eckb-article-page-container-v2 #eckb-article-body #eckb-article-content #eckb-article-content-header-v2 #eckb-article-content-header-row-1,
+                    #eckb-article-page-container-v2 #eckb-article-body #eckb-article-content #eckb-article-content-header-v2 #eckb-article-content-header-row-2,
+                    #eckb-article-page-container-v2 #eckb-article-body #eckb-article-content #eckb-article-content-header-v2 #eckb-article-content-header-row-3,
+                    #eckb-article-page-container-v2 #eckb-article-body #eckb-article-content #eckb-article-content-header-v2 #eckb-article-content-header-row-4,
+                    #eckb-article-page-container-v2 #eckb-article-body #eckb-article-content #eckb-article-content-header-v2 #eckb-article-content-header-row-5 {
+                        flex-direction: row;
+                    }
+                }
+
+                #eckb-article-content-header-row-1 {
+                    margin-bottom: 8px;
+                }
+
+                #eckb-article-content-header-row-1 .eckb-article-content-header-row-left-group,
+                #eckb-article-content-header-row-1 .eckb-article-content-header-row-right-group {
+                    align-items: center;
+                }
+
+                .eckb-article-content-toolbar-button-container {
+                    background-color: #fefefe;
+                    padding: 10px 10px 10px 10px;
+                    margin: 0px 0px 0px 0px;
+                    border-radius: 0px;
+                    border-width: 0px;
+                    border-color: #ffffff;
+                    border-style: solid;
+                }
+
+                .eckb-article-content-toolbar-button-container .eckb-toolbar-button-text {
+                    color: #000000;
+                    font-size: 15px;
+                }
+
+                .eckb-article-content-toolbar-button-container .eckb-toolbar-button-icon {
+                    color: #000000;
+                    font-size: 20px;
+                }
+
+                .eckb-article-content-toolbar-button-container:hover {
+                    background-color: #ffffff;
+                }
+
+                .eckb-article-content-toolbar-button-container:hover .eckb-toolbar-button-text {
+                    color: #000000;
+                }
+
+                .eckb-article-content-toolbar-button-container:hover .eckb-toolbar-button-icon {
+                    color: #000000;
+                }
+
+                #eckb-article-content-header-row-2 {
+                    margin-bottom: 15px;
+                }
+
+                #eckb-article-content-header-row-2 .eckb-article-content-header-row-left-group,
+                #eckb-article-content-header-row-2 .eckb-article-content-header-row-right-group {
+                    align-items: flex-end;
+                }
+
+                #eckb-article-content-footer .epkb-article-navigation-container a {
+                    background-color: #f7f7f7;
+                    color: #1e73be;
+                }
+
+                #eckb-article-content-footer .epkb-article-navigation-container a:hover {
+                    background-color: #dee3e5;
+                    color: #6d6d6d;
+                }
+            </style>
+        </div>
+        <div id="div2" class="hidden page">
+            
+        </div>
+        <div id="div3" class="hidden page"></div>
+    </div>
+    <script type="module" src="./index.js"></script>
 </body>
 
 </html>
